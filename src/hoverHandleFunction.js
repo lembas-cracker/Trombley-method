@@ -6,9 +6,9 @@ export function hoverHandleOver(hoverHandleValue) {
     if (element.closest("svg")) {
       element.setAttribute("initialColor", element.style.fill);
       element.style.fill = "orange";
+      element.style.cursor = "pointer";
     } else {
-      element.setAttribute("initialColor", element.style.backgroundColor);
-      element.style.backgroundColor = "orange";
+      element.classList.add("highlighted");
     }
   });
 }
@@ -21,7 +21,7 @@ export function hoverHandleOut(hoverHandleValue) {
     if (element.closest("svg")) {
       element.style.fill = element.getAttribute("initialColor");
     } else {
-      element.style.backgroundColor = element.getAttribute("initialColor");
+      element.classList.remove("highlighted");
     }
   });
 }

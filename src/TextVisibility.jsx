@@ -1,25 +1,13 @@
 import React from "react";
 
 export class TextVisibility extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      visibility: false
-    };
-  }
-  toggleVisibility = () => {
-    this.setState({
-      visibility: true
-    });
-  };
-
   render() {
     return (
       <div>
-        <div className="item_title" onClick={this.toggleVisibility}>
+        <div className="item_title" onClick={this.props.toggleVisibility}>
           {this.props.title}
         </div>
-        {this.state.visibility ? (
+        {this.props.isVisible ? (
           <p className="item_text">{this.props.text}</p>
         ) : null}
       </div>

@@ -1,16 +1,33 @@
 import React, { Component } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Chart from "./Chart.jsx";
+import Chart from "./Chart1.jsx";
 import { TextVisibility } from "./TextVisibility.jsx";
 import { hoverHandleOver, hoverHandleOut } from "./hoverHandleFunction.js";
 
 class App extends Component {
+  state = {
+    learning: false,
+    order: false,
+    type: false,
+    radicals: false,
+    stroke: false,
+    reading: false,
+    meaning: false,
+    materials: false
+  };
+
+  toggleItem = itemName => {
+    this.setState({
+      [itemName]: !this.state[itemName]
+    });
+  };
+
   render() {
     return (
       <div className="wrapper container-fluid">
         <div className="container charts">
-          <Chart />
+          <Chart toggleVisibility={this.toggleItem} />
         </div>
         <div className="content-list">
           <div className="introduction">
@@ -33,6 +50,8 @@ class App extends Component {
               onMouseOut={() => hoverHandleOut("learning")}
             >
               <TextVisibility
+                isVisible={this.state.learning}
+                toggleVisibility={() => this.toggleItem("learning")}
                 title="Trombley Kanji Learning"
                 text="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book."
               />
@@ -45,8 +64,12 @@ class App extends Component {
                   onMouseOver={() => hoverHandleOver("order")}
                   onMouseOut={() => hoverHandleOut("order")}
                 >
-                  <TextVisibility title="Order of Learning"
-                  text="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book." />
+                  <TextVisibility
+                    isVisible={this.state.order}
+                    toggleVisibility={() => this.toggleItem("order")}
+                    title="Order of Learning"
+                    text="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book."
+                  />
                 </li>
                 <li>
                   <ul className="sidebar-list">
@@ -56,7 +79,12 @@ class App extends Component {
                       onMouseOver={() => hoverHandleOver("type")}
                       onMouseOut={() => hoverHandleOut("type")}
                     >
-                      Kanji Type
+                      <TextVisibility
+                        isVisible={this.state.type}
+                        toggleVisibility={() => this.toggleItem("type")}
+                        title="Kanji Type"
+                        text="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book."
+                      />
                     </li>
                     <li>
                       <ul className="sidebar-list">
@@ -66,7 +94,12 @@ class App extends Component {
                           onMouseOver={() => hoverHandleOver("radicals")}
                           onMouseOut={() => hoverHandleOut("radicals")}
                         >
-                          Radicals
+                          <TextVisibility
+                            isVisible={this.state.radicals}
+                            toggleVisibility={() => this.toggleItem("radicals")}
+                            title="Radicals"
+                            text="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book."
+                          />
                         </li>
                         <li
                           className="item"
@@ -74,7 +107,12 @@ class App extends Component {
                           onMouseOver={() => hoverHandleOver("stroke")}
                           onMouseOut={() => hoverHandleOut("stroke")}
                         >
-                          Stroke Order
+                          <TextVisibility
+                            isVisible={this.state.stroke}
+                            toggleVisibility={() => this.toggleItem("stroke")}
+                            title="Stroke Order"
+                            text="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book."
+                          />
                         </li>
                       </ul>
                     </li>
@@ -88,7 +126,12 @@ class App extends Component {
                       onMouseOver={() => hoverHandleOver("reading")}
                       onMouseOut={() => hoverHandleOut("reading")}
                     >
-                      Reading
+                      <TextVisibility
+                        isVisible={this.state.reading}
+                        toggleVisibility={() => this.toggleItem("reading")}
+                        title="Reading"
+                        text="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book."
+                      />
                     </li>
                     <li
                       className="item"
@@ -96,7 +139,12 @@ class App extends Component {
                       onMouseOver={() => hoverHandleOver("meaning")}
                       onMouseOut={() => hoverHandleOut("meaning")}
                     >
-                      Meaning
+                      <TextVisibility
+                        isVisible={this.state.meaning}
+                        toggleVisibility={() => this.toggleItem("meaning")}
+                        title="Meaning"
+                        text="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book."
+                      />
                     </li>
                   </ul>
                 </li>
@@ -108,9 +156,15 @@ class App extends Component {
               onMouseOver={() => hoverHandleOver("materials")}
               onMouseOut={() => hoverHandleOut("materials")}
             >
-              Materials
+              <TextVisibility
+                isVisible={this.state.materials}
+                toggleVisibility={() => this.toggleItem("materials")}
+                title="Materials"
+                text="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book."
+              />
             </li>
           </ul>
+          <span>*This project is still in development.*</span>
         </div>
       </div>
     );

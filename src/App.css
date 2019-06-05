@@ -1,37 +1,49 @@
 .wrapper {
   display: flex;
-  align-items: center;
   justify-content: center;
 }
-
 /*Visibles container styles*/
 
 .charts {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  height: 90vh;
 }
 /*Content container styles*/
 
 .content-list {
   font-size: 0.9em;
-  padding: 15px;
+  padding: 15px 0 15px 15px;
   width: 23em;
   background-color: #f9f8f8;
 }
 .item {
-  background-color: #eeecea;
-  cursor: pointer;
+  background-color: #d7d2ce;
   font-weight: 400;
   list-style-type: none;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 .item_text {
-  background-color: white;
+  background-color: #eeecea;
   padding: 8px;
 }
 .item_title {
-  padding: 8px;
+  padding: 6px;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+.item_title:hover,
+.highlighted .item_title {
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  transform-origin: right;
+  transform: scale(1.1, 1.1);
+}
+.item_title:hover .item_text,
+.highlighted .item_title .item_text {
+  background-color: white;
 }
 .sidebar-list {
   list-style-type: none;
