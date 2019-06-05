@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Chart from "./Chart1.jsx";
+import Chart from "./Chart.jsx";
 import { TextVisibility } from "./TextVisibility.jsx";
 import { hoverHandleOver, hoverHandleOut } from "./hoverHandleFunction.js";
 
