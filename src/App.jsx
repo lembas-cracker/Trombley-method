@@ -33,12 +33,13 @@ class App extends Component {
           <div className="introduction">
             <h2>Trombley Kanji Learning Method</h2>
             <p className="introduction_text">
-              Relay is a new framework from Facebook that promises to simplify a
-              problem complex enough that the simplification is rather complex
-              in itself (and here’s a visual explanation of the problem Relay
-              solves). I tend to learn things better when I can see how things
-              fit together, so I made this interactive diagram that attempts to
-              explain how Relay’s various parts fit together.
+              Trombley Kanji Learning Method is a way of learning japanese
+              language that promises to simplify problems related to kanji
+              learning and grammar learning (and here’s a visual explanation of
+              this simplification that the method offers). I tend to learn
+              things better when I can see how things fit together, so I made
+              this interactive diagram that attempts to explain how the method’s
+              various parts fit together creating a more rational way to learn.
             </p>
           </div>
 
