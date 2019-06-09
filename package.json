@@ -1,6 +1,7 @@
 {
   "name": "trombley-method",
   "version": "0.1.0",
+  "homepage": "http://lembas-cracker.github.io/trombley-method",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.2.1",
@@ -19,5 +20,11 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
