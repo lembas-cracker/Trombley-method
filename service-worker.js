@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/trombley-method/precache-manifest.803f06e5c8e9dd251a022604c69f49db.js"
+  "/trombley-method/precache-manifest.bfa06dc30c15f5329d755dbc4f3db50d.js"
 );
 
 workbox.clientsClaim();
