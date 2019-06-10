@@ -13,10 +13,11 @@
 /*Content container styles*/
 
 .content-list {
-  font-size: 0.9em;
+  font-size: 0.95em;
   padding: 15px 0 15px 15px;
-  width: 23em;
+  width: 24em;
   background-color: #f9f8f8;
+  font-family: "Inconsolata", monospace;
 }
 .item {
   background-color: #d7d2ce;
@@ -52,4 +53,11 @@
 
 .introduction {
   padding-left: 15px;
+}
+
+@media (max-width: 1000px) {
+  .content-list {
+    font-size: 1.05em;
+    width: 26em;
+  }
 }
